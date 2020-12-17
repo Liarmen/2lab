@@ -28,8 +28,8 @@ C:\Users\Admin>thre
 командой, исполняемой программой или пакетным файлом.
 
 C:\Users\Admin>aws configure
-AWS Access Key ID [****************MVED]: AKIAX4YGSJBXEYQ6NF72
-AWS Secret Access Key [****************wFZn]: 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
+AWS Access Key ID [****************MVED]: AKIAX4YGSJ**********
+AWS Secret Access Key [****************wFZn]: BjmR5DY7tgOa5mYNeCiYkKIXW76LL9**********
 Default region name [us-west-2]:
 Default output format [json]:
 
@@ -42,8 +42,8 @@ C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
 An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
 
 C:\Users\Admin>aws configure
-AWS Access Key ID [****************NF72]: AKIAX4YGSJBXEYQ6NF72
-AWS Secret Access Key [****************rjx4]: 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
+AWS Access Key ID [****************MVED]: AKIAX4YGSJ**********
+AWS Secret Access Key [****************wFZn]: BjmR5DY7tgOa5mYNeCiYkKIXW76LL9**********
 Default region name [us-west-2]: us-east-2
 Default output format [json]:
 
