@@ -1,0 +1,510 @@
+Microsoft Windows [Version 10.0.18363.1256]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.
+
+C:\Users\Admin>doskey /listsize=0
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
+
+C:\Users\Admin>three
+"three" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\Admin>thre
+"thre" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\Admin>aws configure
+AWS Access Key ID [****************MVED]: AKIAX4YGSJBXEYQ6NF72
+AWS Secret Access Key [****************wFZn]: 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
+Default region name [us-west-2]:
+Default output format [json]:
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+An error occurred (VpcLimitExceeded) when calling the CreateVpc operation: The maximum number of VPCs has been reached.
+
+C:\Users\Admin>aws configure
+AWS Access Key ID [****************NF72]: AKIAX4YGSJBXEYQ6NF72
+AWS Secret Access Key [****************rjx4]: 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
+Default region name [us-west-2]: us-east-2
+Default output format [json]:
+
+C:\Users\Admin>aws ec2 create-vpc --cidr-block 10.0.0.0/16
+{
+    "Vpc": {
+        "CidrBlock": "10.0.0.0/16",
+        "DhcpOptionsId": "dopt-0a06c820e650af28d",
+        "State": "pending",
+        "VpcId": "vpc-0be25707bb5c7f88a",
+        "OwnerId": "542790273134",
+        "InstanceTenancy": "default",
+        "Ipv6CidrBlockAssociationSet": [],
+        "CidrBlockAssociationSet": [
+            {
+                "AssociationId": "vpc-cidr-assoc-0ba0411172ca1fccc",
+                "CidrBlock": "10.0.0.0/16",
+                "CidrBlockState": {
+                    "State": "associated"
+                }
+            }
+        ],
+        "IsDefault": false
+    }
+}
+
+
+C:\Users\Admin>aws ec2 create-subnet --vpc-id vpc-010aa9ffe6e942716 --cidr-block 10.0.1.0/24
+
+An error occurred (InvalidVpcID.NotFound) when calling the CreateSubnet operation: The vpc ID 'vpc-010aa9ffe6e942716' does not exist
+
+C:\Users\Admin>aws ec2 create-subnet --vpc-id vpc-0be25707bb5c7f88a --cidr-block 10.0.1.0/24
+{
+    "Subnet": {
+        "AvailabilityZone": "us-east-2b",
+        "AvailabilityZoneId": "use2-az2",
+        "AvailableIpAddressCount": 251,
+        "CidrBlock": "10.0.1.0/24",
+        "DefaultForAz": false,
+        "MapPublicIpOnLaunch": false,
+        "State": "available",
+        "SubnetId": "subnet-097aa6ee7013b37d4",
+        "VpcId": "vpc-0be25707bb5c7f88a",
+        "OwnerId": "542790273134",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-2:542790273134:subnet/subnet-097aa6ee7013b37d4"
+    }
+}
+
+
+C:\Users\Admin>aws ec2 create-subnet --vpc-id vpc-0be25707bb5c7f88a --cidr-block 10.0.0.0/24
+{
+    "Subnet": {
+        "AvailabilityZone": "us-east-2b",
+        "AvailabilityZoneId": "use2-az2",
+        "AvailableIpAddressCount": 251,
+        "CidrBlock": "10.0.0.0/24",
+        "DefaultForAz": false,
+        "MapPublicIpOnLaunch": false,
+        "State": "available",
+        "SubnetId": "subnet-0138e3aa7135a07a1",
+        "VpcId": "vpc-0be25707bb5c7f88a",
+        "OwnerId": "542790273134",
+        "AssignIpv6AddressOnCreation": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "SubnetArn": "arn:aws:ec2:us-east-2:542790273134:subnet/subnet-0138e3aa7135a07a1"
+    }
+}
+
+
+C:\Users\Admin>aws ec2 create-internet-gateway
+{
+    "InternetGateway": {
+        "Attachments": [],
+        "InternetGatewayId": "igw-07e2eaaae810d57bd",
+        "OwnerId": "542790273134",
+        "Tags": []
+    }
+}
+
+
+C:\Users\Admin>aws ec2 attach-internet-gateway --vpc-id vpc-0be25707bb5c7f88a --internet-gateway-id igw-07e2eaaae810d57bd
+
+
+C:\Users\Admin>aws ec2 create-route-table --vpc-id  vpc-0be25707bb5c7f88a
+{
+    "RouteTable": {
+        "Associations": [],
+        "PropagatingVgws": [],
+        "RouteTableId": "rtb-03a8fcaf8d6e8c8ea",
+        "Routes": [
+            {
+                "DestinationCidrBlock": "10.0.0.0/16",
+                "GatewayId": "local",
+                "Origin": "CreateRouteTable",
+                "State": "active"
+            }
+        ],
+        "Tags": [],
+        "VpcId": "vpc-0be25707bb5c7f88a",
+        "OwnerId": "542790273134"
+    }
+}
+
+
+C:\Users\Admin>aws ec2 create-route --route-table-id rtb-03a8fcaf8d6e8c8ea --destination-cidr-block 0.0.0.0/0 --gateway-id
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+aws: error: argument --gateway-id: expected one argument
+
+
+C:\Users\Admin>aws ec2 create-route --route-table-id rtb-03a8fcaf8d6e8c8ea --destination-cidr-block 0.0.0.0/0 --gateway-id igw-07e2eaaae810d57bd
+{
+    "Return": true
+}
+
+
+C:\Users\Admin>aws ec2 describe-route-tables --route-table-id rtb-03a8fcaf8d6e8c8ea
+{
+    "RouteTables": [
+        {
+            "Associations": [],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-03a8fcaf8d6e8c8ea",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-07e2eaaae810d57bd",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-0be25707bb5c7f88a",
+            "OwnerId": "542790273134"
+        }
+    ]
+}
+
+
+C:\Users\Admin>aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-0be25707bb5c7f88a" --query 'Subnets[*].{ID:SubnetId,CIDR:CidrBlock}'
+"Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
+
+
+C:\Users\Admin>aws ec2 associate-route-table  --subnet-id subnet-097aa6ee7013b37d4 --route-table-id subnet-097aa6ee7013b37d4
+
+An error occurred (InvalidRouteTableID.NotFound) when calling the AssociateRouteTable operation: The routeTable ID 'subnet-097aa6ee7013b37d4' does not exist
+
+C:\Users\Admin>aws ec2 associate-route-table  --subnet-id subnet-097aa6ee7013b37d4 --route-table-id rtb-03a8fcaf8d6e8c8ea
+{
+    "AssociationId": "rtbassoc-0f8e6300d69409f2f",
+    "AssociationState": {
+        "State": "associated"
+    }
+}
+
+
+C:\Users\Admin>aws ec2 modify-subnet-attribute --subnet-id subnet-097aa6ee7013b37d4 --map-public-ip-on-launch
+
+
+C:\Users\Admin>aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+
+C:\Users\Admin>aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+
+An error occurred (InvalidKeyPair.Duplicate) when calling the CreateKeyPair operation: The keypair 'MyKeyPair' already exists.
+
+C:\Users\Admin>cd..
+
+C:\Users>aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+Отказано в доступе.
+
+C:\Users>cd Admin
+
+C:\Users\Admin>aws ec2 create-security-group --group-name SSHAccess --description "Security group for SSH access" --vpc-id vpc-0be25707bb5c7f88a
+{
+    "GroupId": "sg-059f80fe9aaa4fd4d"
+}
+
+
+C:\Users\Admin>aws ec2 authorize-security-group-ingress --group-id sg-059f80fe9aaa4fd4d --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+
+C:\Users\Admin>aws ec2 run-instances --image-id ami-0d9574c101c76fa20 --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-059f80fe9aaa4fd4d --subnet-id subnet-097aa6ee7013b37d4
+{
+    "Groups": [],
+    "Instances": [
+        {
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-0d9574c101c76fa20",
+            "InstanceId": "i-0e11efeb92ea1945d",
+            "InstanceType": "t2.micro",
+            "KeyName": "MyKeyPair",
+            "LaunchTime": "2020-12-17T21:30:53+00:00",
+            "Monitoring": {
+                "State": "disabled"
+            },
+            "Placement": {
+                "AvailabilityZone": "us-east-2b",
+                "GroupName": "",
+                "Tenancy": "default"
+            },
+            "PrivateDnsName": "ip-10-0-1-196.us-east-2.compute.internal",
+            "PrivateIpAddress": "10.0.1.196",
+            "ProductCodes": [],
+            "PublicDnsName": "",
+            "State": {
+                "Code": 0,
+                "Name": "pending"
+            },
+            "StateTransitionReason": "",
+            "SubnetId": "subnet-097aa6ee7013b37d4",
+            "VpcId": "vpc-0be25707bb5c7f88a",
+            "Architecture": "x86_64",
+            "BlockDeviceMappings": [],
+            "ClientToken": "a45af237-eefb-438c-9788-68b610ed96e4",
+            "EbsOptimized": false,
+            "EnaSupport": true,
+            "Hypervisor": "xen",
+            "NetworkInterfaces": [
+                {
+                    "Attachment": {
+                        "AttachTime": "2020-12-17T21:30:53+00:00",
+                        "AttachmentId": "eni-attach-05f36c5b404c11a88",
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": 0,
+                        "Status": "attaching"
+                    },
+                    "Description": "",
+                    "Groups": [
+                        {
+                            "GroupName": "SSHAccess",
+                            "GroupId": "sg-059f80fe9aaa4fd4d"
+                        }
+                    ],
+                    "Ipv6Addresses": [],
+                    "MacAddress": "06:b2:ad:e7:b4:74",
+                    "NetworkInterfaceId": "eni-0e43f256c7f130f6c",
+                    "OwnerId": "542790273134",
+                    "PrivateIpAddress": "10.0.1.196",
+                    "PrivateIpAddresses": [
+                        {
+                            "Primary": true,
+                            "PrivateIpAddress": "10.0.1.196"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Status": "in-use",
+                    "SubnetId": "subnet-097aa6ee7013b37d4",
+                    "VpcId": "vpc-0be25707bb5c7f88a",
+                    "InterfaceType": "interface"
+                }
+            ],
+            "RootDeviceName": "/dev/xvda",
+            "RootDeviceType": "ebs",
+            "SecurityGroups": [
+                {
+                    "GroupName": "SSHAccess",
+                    "GroupId": "sg-059f80fe9aaa4fd4d"
+                }
+            ],
+            "SourceDestCheck": true,
+            "StateReason": {
+                "Code": "pending",
+                "Message": "pending"
+            },
+            "VirtualizationType": "hvm",
+            "CpuOptions": {
+                "CoreCount": 1,
+                "ThreadsPerCore": 1
+            },
+            "CapacityReservationSpecification": {
+                "CapacityReservationPreference": "open"
+            },
+            "MetadataOptions": {
+                "State": "pending",
+                "HttpTokens": "optional",
+                "HttpPutResponseHopLimit": 1,
+                "HttpEndpoint": "enabled"
+            },
+            "EnclaveOptions": {
+                "Enabled": false
+            }
+        }
+    ],
+    "OwnerId": "542790273134",
+    "ReservationId": "r-0b4c9589747eca577"
+}
+
+
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>aws ec2 describe-instances --instance-id i-0e11efeb92ea1945d
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0d9574c101c76fa20",
+                    "InstanceId": "i-0e11efeb92ea1945d",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "MyKeyPair",
+                    "LaunchTime": "2020-12-17T21:30:53+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-0-1-196.us-east-2.compute.internal",
+                    "PrivateIpAddress": "10.0.1.196",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "PublicIpAddress": "3.129.58.45",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-097aa6ee7013b37d4",
+                    "VpcId": "vpc-0be25707bb5c7f88a",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2020-12-17T21:30:53+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-08232042c6e4b001d"
+                            }
+                        }
+                    ],
+                    "ClientToken": "a45af237-eefb-438c-9788-68b610ed96e4",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "",
+                                "PublicIp": "3.129.58.45"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2020-12-17T21:30:53+00:00",
+                                "AttachmentId": "eni-attach-05f36c5b404c11a88",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "SSHAccess",
+                                    "GroupId": "sg-059f80fe9aaa4fd4d"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:b2:ad:e7:b4:74",
+                            "NetworkInterfaceId": "eni-0e43f256c7f130f6c",
+                            "OwnerId": "542790273134",
+                            "PrivateIpAddress": "10.0.1.196",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicDnsName": "",
+                                        "PublicIp": "3.129.58.45"
+                                    },
+                                    "Primary": true,
+                                    "PrivateIpAddress": "10.0.1.196"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-097aa6ee7013b37d4",
+                            "VpcId": "vpc-0be25707bb5c7f88a",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "SSHAccess",
+                            "GroupId": "sg-059f80fe9aaa4fd4d"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    }
+                }
+            ],
+            "OwnerId": "542790273134",
+            "ReservationId": "r-0b4c9589747eca577"
+        }
+    ]
+}
+
+
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>
+C:\Users\Admin>ssh -i "MyKeyPair.pem" ec2-user@3.129.58.45
+The authenticity of host '3.129.58.45 (3.129.58.45)' can't be established.
+ECDSA key fingerprint is SHA256:RHRWWuPtzeW1nf/hBk2fgZqn3q7UIznpU8F9whehXyc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '3.129.58.45' (ECDSA) to the list of known hosts.
+
+   __|  __|  __|
+   _|  (   \__ \   Amazon Linux 2 (ECS Optimized)
+ ____|\___|____/
+
+For documentation, visit http://aws.amazon.com/documentation/ecs
+
+   __|  __|  __|
+   _|  (   \__ \   Amazon Linux 2 (ECS Optimized)
+ ____|\___|____/
+
+For documentation, visit http://aws.amazon.com/documentation/ecs
+[ec2-user@ip-10-0-1-196 ~]$   
